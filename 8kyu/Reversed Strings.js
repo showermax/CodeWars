@@ -6,4 +6,3 @@ function solution(str){
   }
   return newstr;
 }
-console.log(solution("string"));
