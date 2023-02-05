@@ -3,8 +3,11 @@ function getSum(a, b)
   let sum = a;
 if (a == b) {
   return sum;}
-  else {
+  else if (a < b) {
     sum =  getSum(a + 1, b) + a;
+    return sum;
+  } else {
+    sum =  getSum(a, b +1) + b;
     return sum;
   }
 }
