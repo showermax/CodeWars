@@ -103,3 +103,19 @@ function friend(friends){
     };
    return array;
  }
+
+ //Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+ function smash (words) {
+  "use strict";
+  return words.join(' ');
+};
+ // without join
+ function smash (words) {
+  let str=""
+  if (words.length == 0) {return str};
+  str = words[0];
+  for (i=1; i<words.length;i++) {
+     str += " " + words[i];
+  } 
+  return str;
+};
