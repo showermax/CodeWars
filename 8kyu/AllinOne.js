@@ -89,3 +89,11 @@ function minMax(arr){
 }
   return [min,max]
 }
+
+function friend(friends){
+  let myf = [];
+  for (let i=0; i<friends.length; i++){
+    if (friends[i].length == 4) myf.push(friends[i])
+}
+  return myf;
+  }
