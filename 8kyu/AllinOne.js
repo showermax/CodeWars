@@ -56,3 +56,23 @@ function getMiddle(s) {
     }
     return s[(s.length - 1) / 2];
   }
+
+
+  function sumMix(x){
+  let sum = 0;
+for(let i=0;  i<x.length; i++){
+  if (typeof(x[i]) == "string"){
+    x[i] = parseInt(x[i]);
+    sum += x[i];
+  } else {
+  sum += x[i];}
+}
+  return sum
+}
+function squareSum(numbers){
+let res = 0;
+  for (let i=0; i<numbers.length; i++){
+  res += numbers[i]**2;
+}
+  return res;
+}
