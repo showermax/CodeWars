@@ -28,7 +28,6 @@ function isValidWalk(walk) {
   }
 console.log(isValidWalk2(['w','e','n','e','w','s','w','e','w','e']));
 
-
 //   assert.isTrue(isValidWalk(['n','s','n','s','n','s','n','s','n','s']), 'should return true');
 //     assert.isFalse(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']), 'should return false');
 //     assert.isFalse(isValidWalk(['w']), 'should return false');
