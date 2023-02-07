@@ -9,9 +9,24 @@ function isValidWalk(walk) {
     if(walk[i] == 'n') cN++;
     else if (walk[i] == 's') cN--; else if (walk[i] == 'w') cW++; else cW--;
    }
-   if (cN == 0 && cW== 0 && walk.length == 10) return true; else return false;;
+   return cN == 0 && cW== 0 && walk.length == 10;
   }
-console.log(isValidWalk(['w','e','n','e','w','s','w','e','w','e']));
+  function isValidWalk2(walk) {
+    let cN = 0
+    let cW = 0
+      
+    for (let i=0; i<walk.length;i++) {
+      switch (walk[i]) {
+        case 'n': cN++; break
+        case 's': cN--; break
+        case 'w': cW++; break
+        case 'e': cW--; break
+      }
+    }
+    
+    return cN == 0 && cW== 0 && walk.length == 10;
+  }
+console.log(isValidWalk2(['w','e','n','e','w','s','w','e','w','e']));
 
 
 //   assert.isTrue(isValidWalk(['n','s','n','s','n','s','n','s','n','s']), 'should return true');
