@@ -46,3 +46,21 @@ for (let j = 0; j < str.length; j++) {
   return i;
 }
 
+//In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+function DNAStrand(dna){
+ let arr = dna.split('');
+ for (let i = 0; i < arr.length; i++) {
+  switch (arr[i]) {
+    case 'A': arr[i]= 'T';
+    break;
+    case 'T': arr[i]= 'A';
+    break;
+    case 'C': arr[i]= 'G';
+    break;
+    case 'G': arr[i]= 'C';
+    break;
+  }
+ }
+ return arr.join('');
+ }
+ console.log(DNAStrand("TATCG"))
