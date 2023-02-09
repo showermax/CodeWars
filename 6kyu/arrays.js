@@ -32,3 +32,19 @@ console.log(isValidWalk2(['w','e','n','e','w','s','w','e','w','e']));
 //     assert.isFalse(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']), 'should return false');
 //     assert.isFalse(isValidWalk(['w']), 'should return false');
 //     assert.isFalse(isValidWalk(['n','n','n','s','n','s','n','s','n','s']), 'should return false');
+
+// Task
+
+// You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+function sortArray(array) {
+  let oddarray=[];
+  let indexarray=[];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i]%2 != 0) {
+      oddarray.push(array[i]);
+      indexarray.push(i);
+    }
+  }
+  return oddarray;
+}
+console.log(sortArray([5, 3, 2, 8, 1, 4]));

@@ -81,3 +81,5 @@ function DNAStrand(dna){
 }
 console.log(removeSmallest([5, 3, 2, 1, 4]));
 //console.log(min, index);
+
+
