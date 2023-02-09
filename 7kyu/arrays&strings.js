@@ -65,7 +65,7 @@ function DNAStrand(dna){
  }
  console.log(DNAStrand("TATCG"))
 
- 
+
 //  Task
 
 //  Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
@@ -75,9 +75,9 @@ function DNAStrand(dna){
  function removeSmallest(numbers) {
   // let min = Math.min(...numbers);
   // let index = numbers.indexOf(min);
-  numbers.splice(numbers.indexOf(Math.min(...numbers)),1);
-  
-  return numbers;
+  let newarr = [...numbers];
+  newarr.splice(numbers.indexOf(Math.min(...numbers)),1);
+  return newarr;
 }
-console.log(removeSmallest([1, 2, 3, 4, 5]));
+console.log(removeSmallest([5, 3, 2, 1, 4]));
 //console.log(min, index);
