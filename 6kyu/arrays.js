@@ -45,6 +45,10 @@ function sortArray(array) {
       indexarray.push(i);
     }
   }
-  return oddarray;
+  oddarray.sort( (a, b) => a - b );
+  for (let j = 0; j < oddarray.length; j++) {
+    array.splice(indexarray[j], 1, oddarray[j]);
+  }
+  return array;
 }
 console.log(sortArray([5, 3, 2, 8, 1, 4]));
