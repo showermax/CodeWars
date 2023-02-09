@@ -119,3 +119,13 @@ function friend(friends){
   } 
   return str;
 };
+
+
+//What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
+function addLength(str) {
+  let arr = str.split(" ");
+    for (let i= 0; i < arr[i].length; i++ ) {
+      arr[i] = arr[i] + " " + arr.length;
+    }
+    return arr;
+  }

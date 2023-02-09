@@ -64,3 +64,17 @@ function DNAStrand(dna){
  return arr.join('');
  }
  console.log(DNAStrand("TATCG"))
+
+
+ 
+//What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
+function addLength(str) {
+  let arr = str.split(" ");
+    for (let i= 0; i < arr.length; i++ ) {
+      for (let j = 0; j < arr[i].length; j++) {
+        arr[i] = arr[i] + " " + arr[i].length;
+      } 
+  }
+    return arr[0];
+  }
+  console.log(addLength("lemon tree"));
