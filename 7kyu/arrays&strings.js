@@ -65,16 +65,19 @@ function DNAStrand(dna){
  }
  console.log(DNAStrand("TATCG"))
 
-
  
-//What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
-function addLength(str) {
-  let arr = str.split(" ");
-    for (let i= 0; i < arr.length; i++ ) {
-      for (let j = 0; j < arr[i].length; j++) {
-        arr[i] = arr[i] + " " + arr[i].length;
-      } 
-  }
-    return arr[0];
-  }
-  console.log(addLength("lemon tree"));
+//  Task
+
+//  Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+ 
+//  Don't change the order of the elements that are left.
+
+ function removeSmallest(numbers) {
+  // let min = Math.min(...numbers);
+  // let index = numbers.indexOf(min);
+  numbers.splice(numbers.indexOf(Math.min(...numbers)),1);
+  
+  return numbers;
+}
+console.log(removeSmallest([1, 2, 3, 4, 5]));
+//console.log(min, index);
