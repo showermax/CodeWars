@@ -129,3 +129,7 @@ function addLength(str) {
     }
     return arr;
   }
+// just a loke
+  function howManyLightsabersDoYouOwn(name) {
+  return name === 'Zach' ? 18 : 0;
+}
