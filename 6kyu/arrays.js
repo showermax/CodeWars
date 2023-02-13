@@ -53,3 +53,21 @@ function sortArray(array) {
 }
 console.log(sortArray([5, 3, 2, 8, 1, 4]));
 
+
+function sum (numbers) {
+  let s = 0;
+  if (numbers != []) {
+    for (let i = 0; i < numbers.length; i++) {
+       s += numbers[i];
+    } return s;
+  }
+};
+
+function isPangram(string){
+  let lowstring = string.toLowerCase();
+  let regexp = /[a-z]/g;
+  let arr = lowstring.match(regexp);
+  let letters = arr.filter((element, indexOfelement) => arr.indexOf(element) == indexOfelement);
+  return (letters.length == 26) ? true : false;
+}
+console.log(isPangram('The quick brown fo jumps over the lazy dog.'));

@@ -133,3 +133,13 @@ function addLength(str) {
   function howManyLightsabersDoYouOwn(name) {
   return name === 'Zach' ? 18 : 0;
 }
+
+// Sum Numbers
+function sum (numbers) {
+  let s = 0;
+  if (numbers != []) {
+    for (let i = 0; i < numbers.length; i++) {
+       s += numbers[i];
+    } return s;
+  }
+};
