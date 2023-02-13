@@ -71,3 +71,20 @@ function isPangram(string){
   return (letters.length == 26) ? true : false;
 }
 console.log(isPangram('The quick brown fo jumps over the lazy dog.'));
+
+//Consecutive strings
+//You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+function longestConsec(strarr, k) {
+     let newarray =  strarr.map((element, index,) => {
+       for (let i = 1; i < k; i++) {
+         element += strarr[index+i];
+      } return element;
+     }).slice(0,strarr.length - k + 1);
+     let max = newarray[0].length ;
+     let n = 0;
+     for (let i = 1; i < newarray.length; i++) {
+      if (newarray[i].length > max) { max = newarray[i].length; n = i;}
+     }
+     return newarray[n];
+}
+console.log(longestConsec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3));
