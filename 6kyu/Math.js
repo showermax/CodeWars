@@ -37,13 +37,16 @@ function digPow(n, p){
 }
   //console.log(digPow(46288, 3));
 
-  function tribonacci(signature,n){
-    if (n == 0) return [];
-    if (n <=3 ) return signature.slice(0,n);
-    for (let i = 3; i < n; i++) {
-        signature.push(signature[i-3] + signature[i-2] + signature[i-1]);
-        
+  function Xbonacci(signature,n){
+    let sum = 0;
+    let l = signature.length;
+    for (let i = l; i < n; i++) {
+        sum = 0;
+        for (let j = (i - l); j < i; j++) {
+            sum += signature[j];
+        }
+        signature.push(sum);
     }
-    return signature;
+    return signature.slice(0,n);
   }
-  console.log(tribonacci([1,1,1],10));
+  console.log(Xbonacci([0,0,0,0,1],10));
