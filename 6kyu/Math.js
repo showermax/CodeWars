@@ -11,7 +11,7 @@ do {
 return (k == m) ? n : -1;
 }
 
-console.log(findNb(100));
+//console.log(findNb(100));
 
 //Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p
 
@@ -27,7 +27,6 @@ console.log(findNb(100));
 function digPow(n, p){
    let arr = [];
    let sum = 0;
-   let s = 0;
    let narr = n;
     while ( narr > 0) {
        arr.unshift(Math.round(narr % 10));
@@ -36,4 +35,15 @@ function digPow(n, p){
     sum = arr.reduce((s,e,i) => s + e**(p+i),0);
     return  ((sum % n) === 0) ? sum/n : -1;
 }
-  console.log(digPow(46288, 3));
+  //console.log(digPow(46288, 3));
+
+  function tribonacci(signature,n){
+    if (n == 0) return [];
+    if (n <=3 ) return signature.slice(0,n);
+    for (let i = 3; i < n; i++) {
+        signature.push(signature[i-3] + signature[i-2] + signature[i-1]);
+        
+    }
+    return signature;
+  }
+  console.log(tribonacci([1,1,1],10));
