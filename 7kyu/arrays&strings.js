@@ -81,13 +81,16 @@ function DNAStrand(dna){
 }
 //console.log(removeSmallest([5, 3, 2, 1, 4]));
 //console.log(min, index);
-function filter_list(l) {
-let arr = [];
-arr = l.filter(i => ((isNumber(i)) || (i === 0)) ? i : '');
-return arr;
-}
-console.log(filter_list([1,'a','b',0,15]));
+// function filter_list(l) {
+// let arr = [];
+// arr = l.filter(i => ((isNumber(i)) || (i === 0)) ? i : '');
+// return arr;
+// }
+// console.log(filter_list([1,'a','b',0,15]));
 
-function doubleChar(str) {
-  str.split();
+function betterThanAverage(classPoints, yourPoints) {
+  classPoints.push(yourPoints);
+
+  return classPoints.reduce((a, b) = > (a+b))/classPoints.length;
 }
+console.log(betterThanAverage([2, 34], 5));
