@@ -88,3 +88,15 @@ function longestConsec(strarr, k) {
      return newarray[n];
 }
 console.log(longestConsec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3));
+
+var uniqueInOrder=function(iterable){
+  newarray = [];
+for (let i = 0; i < iterable.length; i++) {
+  newarray.push(iterable[i]);
+  while (iterable[i] === iterable[i+1]) {
+    i++;
+  }
+}
+return newarray;
+}
+console.log(uniqueInOrder([1,2,2,3,3]))
