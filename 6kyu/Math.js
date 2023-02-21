@@ -49,4 +49,44 @@ function digPow(n, p){
     }
     return signature.slice(0,n);
   }
-  console.log(Xbonacci([0,0,0,0,1],10));
+  //console.log(Xbonacci([0,0,0,0,1],10));
+
+  function persistence(num) {
+    let arr = [];
+    let i = 0;
+    if (num < 10) return 0;
+    loop1:
+    while (num > 9) {
+    while ( num > 0) {
+        arr.unshift(Math.round(num % 10));
+        num = num/10 - num%10/10;       
+     }
+     i++;
+    if (arr.reduce((p, e) => p*e) < 10) {
+        return i;
+    } else {
+        num = arr.reduce((p, e) => p*e);
+        arr=[];
+        continue loop1;
+    }
+}
+}
+ //console.log(persistence(4));
+
+ function findUniq(arr) {  
+    
+    let x =  arr.find(e => e == 0);
+    return x;
+   
+    let s = 0;
+    let i = 0;     
+        while (s==0) {
+           s = arr[i+1] - arr[i];
+           i++;
+        }
+        if (i<arr.length-1) {
+        return (arr[i+1] == arr[i-1]) ? arr[i] : arr[i-1];
+        } 
+        else return arr[i];
+  }
+  console.log(findUniq([ 0, 0, 1 ]));
