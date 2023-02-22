@@ -143,3 +143,8 @@ function sum (numbers) {
     } return s;
   }
 };
+
+function positiveSum(arr) {
+  return arr.filter(i => i >0).reduce((s,i) => s+i)
+}
+console.log(positiveSum([1,2,3,4,-6,6]));
