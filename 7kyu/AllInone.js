@@ -44,3 +44,30 @@ function basicOp(operation, value1, value2)
       break;
   }
 }
+
+function squareDigits(num){
+ let str=num.toString().split('').map(el=>el*el).join('');
+return parseInt(str,10);
+}
+function Dig(num){
+arr = num.toString().split('');
+let element='';
+Obj = {
+  0 : 'zero',
+  1 : 'one',
+  2 : 'two',
+  3 : 'three',
+  4 : 'four',
+  5 : 'five',
+  6 : 'six',
+  7 : 'seven',
+  8 : 'eight',
+  9 : 'nine'
+}
+element = Obj[arr[0]];
+ for (let i = 1; i < arr.length; i++) {
+   element = element + Obj[arr[i]];
+ }
+return element;
+}
+console.log(Dig(116))
