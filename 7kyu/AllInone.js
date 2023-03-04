@@ -50,9 +50,10 @@ function squareDigits(num){
 return parseInt(str,10);
 }
 function Dig(num){
-arr = num.toString().split('');
+let arr = num.toString().split('');
 let element='';
 let arr2=[];
+if (num===4) return [four];
 Obj = {
   0 : 'zero',
   1 : 'one',
@@ -63,7 +64,13 @@ Obj = {
   6 : 'six',
   7 : 'seven',
   8 : 'eight',
-  9 : 'nine'
+  9 : 'nine',
+  10: 'onezero',
+  11: 'oneone',
+  12: 'onetwo',
+  13: 'onethree',
+  14: 'onefour',
+  15: 'onefive'
 }
 element = Obj[arr[0]];
  for (let i = 1; i < arr.length; i++) {
@@ -76,8 +83,8 @@ while (str1.length !== str2.length ){
 arr2.push(Obj[str1.length]);
 str2=arr2[arr2.length-2];
 str1=arr2[arr2.length-1];
-debugger
+
 }
 return arr2;
 }
-console.log(Dig(60))
+console.log(Dig(37))
