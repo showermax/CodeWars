@@ -52,6 +52,7 @@ return parseInt(str,10);
 function Dig(num){
 arr = num.toString().split('');
 let element='';
+let arr2=[];
 Obj = {
   0 : 'zero',
   1 : 'one',
@@ -68,6 +69,15 @@ element = Obj[arr[0]];
  for (let i = 1; i < arr.length; i++) {
    element = element + Obj[arr[i]];
  }
-return element;
+arr2.push(element);
+let str1=arr2[arr2.length-1];
+let str2='';
+while (str1.length !== str2.length ){
+arr2.push(Obj[str1.length]);
+str2=arr2[arr2.length-2];
+str1=arr2[arr2.length-1];
+debugger
 }
-console.log(Dig(116))
+return arr2;
+}
+console.log(Dig(60))
