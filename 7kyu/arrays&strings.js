@@ -86,6 +86,15 @@ let arr = [];
 arr = l.filter(i => ((isNumber(i)) || (i === 0)) ? i : '');
 return arr;
 }
-console.log(filter_list([1,'a','b',0,15]));
 
 
+
+// let petString = "James has a pet cat.";
+// let petRegex = /dog|cat|bird|fish/; // Change this line
+//  result = petRegex.test(petString);
+
+function isIsogram(str){  
+let result = str.match(/a/g)
+return (result.length === 1 || result.length === 0) ? true : false
+}
+console.log(isIsogram('abc'));
