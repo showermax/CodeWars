@@ -116,6 +116,19 @@ function queueTime(customers, n) {
     }
     return max
 }
-console.log(queueTime([5,3,4],    1));
+// console.log(queueTime([5,3,4],    1));
 
+// const a = 'dear'
+// let result1 = 'Hello my '+ a + ' friend';
+// let result2 = `Hello my ${a} friend`;
 
+// console.log(result1, result2);
+
+function sumDigPow(a, b) {
+  let arr0=[];
+    for (let i = a; i <=b; i++) {
+    if (i === String(i).split('').map((el,i)=> Math.pow(el,i+1)).reduce((a,b)=>a+b)) arr0.push(i);
+  }
+  return arr0;
+}
+console.log(sumDigPow(10, 150))
